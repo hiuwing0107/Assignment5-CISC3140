@@ -1,0 +1,33 @@
+#!/bin/bash
+# This LINUX COMMAND will load the CSV file from URL and then filter the 1st column artist name list by using command "sort".
+# Then it will make it unique by using keyword "uniq".
+$ load csv from 'https://spotifycharts.com/regional'|awk '{print $1}' | sort | uniq
+
+# downloading zip
+$ get files.grouplens.org/datasets/movielens/ml-latest-small.zip
+# Unzip
+$ cd Downloads
+$ unzip ml-latest-small.zip
+
+# preview the first 12 lines and the last 4 line of the unzipped file
+$ head -12 movies.csv
+$ tail -4 movies.csv
+
+# Extract movie names from dataset
+$ echo "Extracting ml-20/movies.csv from ml-20m.zip to ml-20m_movies.csv"
+$ unzip -p ml-20m.zip ml-20m/movie.csv > ml-20m_movies.csv
+# Sort movie titles from dataset in ascending order
+$sort -t movies.csv
+$ head movies.csv
+
+# Create a Gif
+$ sudo apt-get install imagemagick
+$ convert -delay 100 -loop 0 image*.jpg HIUWING.gif
+
+—————————————————————————————————————————————————————————
+CISC 3140 - Design and Implementation
+Professor: Katherine Chuang
+Student Name: Hiu Wing, Lam
+Emplid: 23626630
+
+Assignment 5 - Linux Terminal Command Practice
